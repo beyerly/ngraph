@@ -164,7 +164,7 @@ namespace ngraph
         {
             OperatorSet result;
 
-            auto dm = m_map.find(domain);
+            auto dm = m_map.find("");
             if (dm == std::end(m_map))
             {
                 throw error::UnknownDomain{domain};
@@ -192,7 +192,7 @@ namespace ngraph
                                                       const std::string& domain)
         {
             // search for domain
-            auto dm_map = m_map.find(domain);
+            auto dm_map = m_map.find("");
             if (dm_map == std::end(m_map))
             {
                 return false;
